@@ -25,10 +25,8 @@ jobs:
       - name: Upload test
         uses: actions/upload-artifact@v4
         with: 
-          name: dist-files
-          path: |
-            dist
-             package.json
+          name: test-report
+          path: test.json
 
   build:
     needs: test
@@ -54,7 +52,7 @@ jobs:
       - name: upload artifact 
         uses: actions/upload-artifact@v4
         with: 
-          name: dist-files
+          name: dist-files02
           path: |
             dist
              package.json
