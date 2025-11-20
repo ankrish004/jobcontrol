@@ -25,8 +25,9 @@ jobs:
       - name: Upload test
         uses: actions/upload-artifact@v4
         with: 
-          name: test-reports
-          path: test.json 
+          name: test-file
+          path: |
+             test.json
 
   build:
     needs: test
